@@ -1,10 +1,13 @@
-public void setup()
+import processing.core.PApplet;
+
+public class Sketch extends PApplet {
+  public void setup()
 {
   String lines[] = loadStrings("palindromes.txt");
   println("there are " + lines.length + " lines");
   for (int i=0; i < lines.length; i++) 
   {
-    if(palindrome(lines[i])==true)
+    if(isPalindrome(lines[i])==true)
     {
       println(lines[i] + " IS a palindrome.");
     }
@@ -36,5 +39,5 @@ public String onlyLetters(String sString){
     if (Character.isLetter(sString.charAt(i)) == true)
      s = s + sString.substring(i,i+1);
   return s;
+  }
 }
-
