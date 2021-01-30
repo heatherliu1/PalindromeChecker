@@ -1,7 +1,4 @@
-import processing.core.PApplet;
-
-public class Sketch extends PApplet {
-  public void setup()
+ public void setup()
 {
   String lines[] = loadStrings("palindromes.txt");
   println("there are " + lines.length + " lines");
@@ -32,12 +29,5 @@ public String reverse(String sWord){
       
   return s;
 }
-
-public String onlyLetters(String sString){
-  String s = "";
-  for (int i = 0; i < sString.length(); i++)
-    if (Character.isLetter(sString.charAt(i)) == true)
-     s = s + sString.substring(i,i+1);
-  return s;
-  }
 }
+
